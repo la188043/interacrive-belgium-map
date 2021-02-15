@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .belgium-map {
+  background-color: gray;
+} */
+
+.belgium-map > * {
+  fill: rgb(83, 83, 83);
+  transition: fill .4s;
+  pointer-events: all;
+}
+
+.belgium-map > *:hover {
+  fill:rgb(136, 136, 136)
+}
