@@ -25,3 +25,7 @@ code {
 .belgium-map > *:hover {
   fill:rgb(136, 136, 136)
 }
+
+.belgium-map > *.selected {
+  fill: #00d1b2;
+}
