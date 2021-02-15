@@ -29,12 +29,15 @@ const BelgiumMap = () => {
     <div className="wrapper">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="752.16895"
-        height="611.36615"
+        viewBox="0 0 752.16895 611.36615"
+        width="50vw"
+        height="50vw"
         className="belgium-map"
       >
         {provinces.map(p => (
-          <path {...p} key={p.id} onClick={handleClick} className={classNames({ 'selected': p.isSelected })} />
+          <path {...p} key={p.id} onClick={handleClick} className={classNames({ 'selected': p.isSelected })}>
+            <text>{p.name}</text>
+          </path>
         ))}
       </svg>
       <div className="provinces">

@@ -15,10 +15,8 @@ code {
 .wrapper {
   min-height: 100vh;
   width: 100%;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -26,6 +24,11 @@ code {
   fill: rgb(83, 83, 83);
   transition: fill .4s;
   pointer-events: all;
+}
+
+text {
+  color: #fff;
+  z-index: 10;
 }
 
 .belgium-map > *:hover {
