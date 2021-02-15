@@ -12,9 +12,15 @@ code {
     monospace;
 }
 
-/* .belgium-map {
-  background-color: gray;
-} */
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .belgium-map > * {
   fill: rgb(83, 83, 83);
@@ -28,4 +34,13 @@ code {
 
 .belgium-map > *.selected {
   fill: #00d1b2;
+}
+
+.provinces {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.provinces__name + .provinces__name {
+  margin-left: 10px;
 }

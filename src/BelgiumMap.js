@@ -25,16 +25,25 @@ const BelgiumMap = () => {
     console.log(provinceId);
   }
 
-  return <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="752.16895"
-    height="611.36615"
-    className="belgium-map"
-  >
-    {provinces.map(p => (
-      <path {...p} key={p.id} onClick={handleClick} className={classNames({ 'selected': p.isSelected })} />
-    ))}
-  </svg>;
+  return (
+    <div className="wrapper">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="752.16895"
+        height="611.36615"
+        className="belgium-map"
+      >
+        {provinces.map(p => (
+          <path {...p} key={p.id} onClick={handleClick} className={classNames({ 'selected': p.isSelected })} />
+        ))}
+      </svg>
+      <div className="provinces">
+        {provinces.map(p => (
+          <>{p.isSelected && <p className="provinces__name">{p.name}</p>}</>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default BelgiumMap;
