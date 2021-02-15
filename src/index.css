@@ -27,15 +27,16 @@ code {
 }
 
 text {
-  color: #fff;
+  fill: #fff;
   z-index: 10;
+  user-select: none;
 }
 
 .belgium-map > *:hover {
   fill:rgb(136, 136, 136)
 }
 
-.belgium-map > *.selected {
+path.selected {
   fill: #00d1b2;
 }
 

@@ -35,9 +35,19 @@ const BelgiumMap = () => {
         className="belgium-map"
       >
         {provinces.map(p => (
-          <path {...p} key={p.id} onClick={handleClick} className={classNames({ 'selected': p.isSelected })}>
-            <text>{p.name}</text>
-          </path>
+          <g onClick={handleClick} id={p.id} key={p.id} title={p.name}>
+            <path
+              d={p.d}
+              className={classNames({ 'selected': p.isSelected })}
+            />
+
+            <text
+              x={p.coordinates.x}
+              y={p.coordinates.y}
+            >
+              {p.name}
+            </text>
+          </g>
         ))}
       </svg>
       <div className="provinces">
